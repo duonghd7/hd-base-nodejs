@@ -1,0 +1,14 @@
+{
+    "domain": "https://production.domain.com",
+    "port": 80,
+    "env": "production",
+    "secret": "XjZ94ab02fCIz8NbAv2rE0eCMxyW2GBa",
+    "database_connection" : {
+        "connectionLimit"    : 10,
+        "host"               : "us-cdbr-iron-east-05.cleardb.net",
+        "database"           : "heroku_e49a3ab39588922",
+        "user"               : "bc84dc4459711b",
+        "password"           : "3ea35aaf",
+        "multipleStatements" : true
+    }
+}

@@ -1,0 +1,181 @@
+{
+	"schemes": [
+		"http"
+	],
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "hd-base-node"
+	},
+	"basePath": "/",
+	"paths": {
+		"/api/auth/me": {
+			"post": {
+				"tags": [
+					"Auth"
+				],
+				"summary": "auth current user by token",
+				"description": "",
+				"operationId": "auth current user by token",
+				"produces": [
+					"application/xml",
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "auth me success"
+					},
+					"default": {
+						"description": "auth me"
+					}
+				}
+			}
+		},
+		"/api/auth/sign-up": {
+			"post": {
+				"tags": [
+					"Auth"
+				],
+				"summary": "sign-up",
+				"description": "",
+				"operationId": "sign-up",
+				"produces": [
+					"application/xml",
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"description": "",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/UserLogin"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "sign up success"
+					},
+					"default": {
+						"description": "sign up"
+					}
+				}
+			}
+		},
+		"/api/auth/sign-in": {
+			"post": {
+				"tags": [
+					"Auth"
+				],
+				"summary": "sign-in",
+				"description": "",
+				"operationId": "sign-in",
+				"produces": [
+					"application/xml",
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"description": "",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/UserLogin"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "sign in success"
+					},
+					"default": {
+						"description": "sign in"
+					}
+				}
+			}
+		},
+		"/api/auth/sign-out": {
+			"post": {
+				"tags": [
+					"Auth"
+				],
+				"summary": "sign-out",
+				"description": "",
+				"operationId": "sign-out",
+				"produces": [
+					"application/xml",
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "sign out success"
+					},
+					"default": {
+						"description": "sign out"
+					}
+				}
+			}
+		},
+		"/api/auth/change-password": {
+			"post": {
+				"tags": [
+					"Auth"
+				],
+				"summary": "change password",
+				"description": "",
+				"operationId": "get user by id",
+				"produces": [
+					"application/xml",
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"description": "",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/UserChangePassword"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Change password success."
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"UserLogin": {
+			"type": "object",
+			"properties": {
+				"username": {
+					"type": "string",
+					"default": "duonghd"
+				},
+				"password": {
+					"type": "string",
+					"default": "123456"
+				}
+			}
+		},
+		"UserChangePassword": {
+			"type": "object",
+			"properties": {
+				"old_password": {
+					"type": "string",
+					"default": "old password"
+				},
+				"new_password": {
+					"type": "string",
+					"default": "new password"
+				}
+			}
+		}
+	}
+}

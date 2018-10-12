@@ -1,0 +1,8 @@
+{
+	"name": "Base Setup",
+	"domain": "http://localhost",
+	"port": 8080,
+	"env": "development",
+	"secret": "XFZ34abo2fCiz8NbZv2rE0eCmxyW2GBa",
+	"database_connection": "mysql://root:Tu0denchin_123@localhost/hd_firstsetup"
+}
