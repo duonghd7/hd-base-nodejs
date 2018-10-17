@@ -3,5 +3,12 @@
     "port": 8080,
     "env": "development",
     "secret": "XFZ34abo2fCiz8NbZv2rE0eCmxyW2GBa",
-    "database_connection" : "mysql://root:Tu0denchin_123@localhost/hd_firstsetup"
+    "database_connection" : {
+        "connectionLimit"    : 10,
+        "host"               : "localhost",
+        "database"           : "hd_firstsetup",
+        "user"               : "root",
+        "password"           : "Tu0denchin_123",
+        "multipleStatements" : true
+    }
 }
