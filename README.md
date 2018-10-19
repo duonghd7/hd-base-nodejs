@@ -24,7 +24,7 @@ I will config database and phpmyadmin on [Ubuntu 16.04.5 Desktop (64-bit)](http:
 
 3. Install phpmyadmin
 ```
-apt-get install phpmyadmin
+> apt-get install phpmyadmin
 ```
 
 4. Create database and user
@@ -97,10 +97,20 @@ mysql> show tables;
 > sudo service apache2 reload
 ```
 
-### I. Run
+### II. Config
+1. Environment
+- [./config/development_config.json](https://github.com/duonghd7/hd-base-nodejs/blob/master/config/development_config.json)
+- [./config/production_config.json](https://github.com/duonghd7/hd-base-nodejs/blob/master/config/production_config.json)
+
+2. Swagger
+- [./config/swagger.json](https://github.com/duonghd7/hd-base-nodejs/blob/master/config/swagger.json)
+- [./config/development_swagger.json](https://github.com/duonghd7/hd-base-nodejs/blob/master/config/development_swagger.json)
+- [./config/production_swagger.json](https://github.com/duonghd7/hd-base-nodejs/blob/master/config/production_swagger.json)
+
+### III. Run
 1. Install package
 ```
-* > npm install
+> npm install
 ```
 
 2. Build
@@ -119,19 +129,27 @@ Note
 > npm start
 ```
 
-### II. Information
-- We use [sequelizejs](http://docs.sequelizejs.com/) to manager database
-- It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.
-- Circle
-    user: call api
-    -> controllers receive data
-        -> call service
-            -> call repository
-                -> call database
+### IV. Information
+Circle<br>
+user: call api<br>
+----> controllers receive data<br>
+--------> call service<br>
+------------> call repository<br>
+----------------> call database
 
-### III. Tutorial
-1. Create database (folder database)
-2. Create model
-3. Create repository
-4. Create service
-5. Create controller
+### V. Tutorial
+1. Create model
+2. Create repository
+3. Create service
+4. Create controller
+
+#
+MIT License
+
+Copyright (c) 2018 Hà Đại Dương
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
