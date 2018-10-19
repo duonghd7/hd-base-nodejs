@@ -7,8 +7,8 @@
 	"database_connection": {
 		"connectionLimit": 10,
 		"host": "localhost",
-		"database": "hd_firstsetup",
-		"user": "root",
+		"database": "first_project_database",
+		"user": "newuser",
 		"password": "Tu0denchin_123",
 		"multipleStatements": true
 	}
