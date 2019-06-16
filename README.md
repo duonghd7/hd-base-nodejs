@@ -33,7 +33,7 @@ I will config database and phpmyadmin on [Ubuntu 16.04.5 Desktop (64-bit)](http:
 > <enter password of root>
 
 mysql> CREATE DATABASE first_project_database;
-mysql> CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+mysql> CREATE USER 'newuser'@'%' IDENTIFIED BY 'password';
 mysql> GRANT ALL PRIVILEGES ON  first_project_database.*  TO 'newuser'@'localhost';
 mysql> FLUSH PRIVILEGES;
 ```
